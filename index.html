@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BELLISIMA Centro de Estética — La que te cuida | Dorrego, Mendoza</title>
+<meta name="description" content="Estética facial, corporal y depilación definitiva en Dorrego, Guaymallén, Mendoza. HIFU, Mío Up, Dermapen, láser. Escuela de capacitación profesional.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        ink:    '#2B2927',
+        cream:  '#FAF7F2',
+        rose:   '#D4A396',
+        blush:  '#EBDCD8',
+        gold:   '#C9A961',
+      },
+      fontFamily: {
+        display: ['"Cormorant Garamond"', 'serif'],
+        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+      },
+    }
+  }
+}
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { -webkit-font-smoothing: antialiased; }
+
+  /* Logo circular de marca */
+  .logo-ring {
+    display: inline-flex; flex-direction: column; align-items: center; justify-content: center;
+    border-radius: 9999px; background: #fff;
+    box-shadow: 0 1px 0 rgba(43,41,39,.06), 0 8px 24px -12px rgba(43,41,39,.25);
+    border: 1px solid rgba(43,41,39,.08);
+  }
+  .logo-word {
+    font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; color: #2B2927;
+    line-height: 1;
+  }
+  .logo-rule { height: 1px; background: rgba(43,41,39,.35); }
+  .logo-tag {
+    font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 500; color: #6B6663;
+    letter-spacing: .18em; line-height: 1; white-space: nowrap;
+  }
+
+  .eyebrow {
+    font-size: 10px; letter-spacing: .28em; text-transform: uppercase; font-weight: 600;
+  }
+  .hairline { height: 1px; background: linear-gradient(90deg, transparent, rgba(201,169,97,.55), transparent); }
+
+  .reveal { opacity: 0; transform: translateY(22px); transition: opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1); }
+  .reveal.in { opacity: 1; transform: none; }
+
+  .card-media { transition: transform 1.2s cubic-bezier(.16,1,.3,1); }
+  .card:hover .card-media { transform: scale(1.06); }
+  .card { transition: transform .5s cubic-bezier(.16,1,.3,1), box-shadow .5s ease; }
+  .card:hover { transform: translateY(-6px); box-shadow: 0 30px 60px -30px rgba(43,41,39,.28); }
+
+  .link-fine { position: relative; }
+  .link-fine::after {
+    content: ''; position: absolute; left: 0; bottom: -3px; height: 1px; width: 100%;
+    background: currentColor; transform: scaleX(0); transform-origin: right;
+    transition: transform .45s cubic-bezier(.16,1,.3,1);
+  }
+  .link-fine:hover::after { transform: scaleX(1); transform-origin: left; }
+
+  .nav-link { position: relative; }
+  .nav-link::after {
+    content: ''; position: absolute; left: 50%; bottom: -6px; height: 1px; width: 0;
+    background: #D4A396; transition: all .4s cubic-bezier(.16,1,.3,1);
+  }
+  .nav-link:hover::after { width: 100%; left: 0; }
+
+  .wa-float { box-shadow: 0 18px 40px -14px rgba(43,41,39,.55); }
+  .wa-float:hover { box-shadow: 0 20px 46px -14px rgba(212,163,150,.85); }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+    * { animation: none !important; }
+  }
+  :focus-visible { outline: 2px solid #D4A396; outline-offset: 3px; border-radius: 2px; }
+</style>
+</head>
+<body class="bg-white text-ink font-sans antialiased">
+
+<!-- ================= NAVBAR ================= -->
+<header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-500 bg-white/80 backdrop-blur-xl border-b border-ink/[.06]">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="flex items-center justify-between h-[72px] md:h-[84px]">
+
+      <!-- Logo -->
+      <a href="#top" class="flex items-center gap-3 shrink-0" aria-label="BELLISIMA, La que te cuida">
+        <span class="logo-ring w-[58px] h-[58px] md:w-[64px] md:h-[64px]">
+          <span class="logo-word text-[11px] md:text-[12px] tracking-[.14em]">BELLISIMA</span>
+          <span class="logo-rule w-[34px] md:w-[38px] my-[4px]"></span>
+          <span class="logo-tag text-[5px] md:text-[5.5px]">— LA QUE TE CUIDA —</span>
+        </span>
+      </a>
+
+      <!-- Links -->
+      <nav class="hidden lg:flex items-center gap-10 text-[13px] font-medium tracking-wide text-ink/70">
+        <a href="#tratamientos" class="nav-link hover:text-ink transition-colors">Tratamientos</a>
+        <a href="#capacitacion" class="nav-link hover:text-ink transition-colors">Capacitación</a>
+        <a href="#donde" class="nav-link hover:text-ink transition-colors">Dónde estamos</a>
+        <a href="https://www.instagram.com/bellisimamdz/" target="_blank" rel="noopener"
+           class="nav-link inline-flex items-center gap-1.5 hover:text-ink transition-colors">
+          <svg class="w-[15px] h-[15px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
+          Instagram
+        </a>
+      </nav>
+
+      <!-- CTA -->
+      <div class="flex items-center gap-2.5">
+      <a href="https://www.instagram.com/bellisimamdz/" target="_blank" rel="noopener" aria-label="Instagram de BELLISIMA"
+         class="lg:hidden w-11 h-11 rounded-full border border-ink/15 flex items-center justify-center text-ink/65 transition-all duration-500 hover:border-rose hover:text-rose">
+        <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a href="https://wa.me/542614727245" target="_blank" rel="noopener"
+         class="group relative inline-flex items-center gap-2 rounded-full border border-ink/15 bg-ink text-white px-5 py-3 md:px-7 md:py-3.5 text-[10px] md:text-[11px] font-semibold tracking-[.16em] uppercase overflow-hidden transition-all duration-500 hover:border-gold/60">
+        <span class="absolute inset-0 bg-gradient-to-r from-rose to-[#c08d7e] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)]"></span>
+        <span class="relative">Reservar turno</span>
+        <svg class="relative w-3 h-3 transition-transform duration-500 group-hover:translate-x-1" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg>
+      </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section id="top" class="relative pt-[104px] md:pt-[120px] pb-16 md:pb-28 overflow-hidden">
+  <!-- Atmósfera -->
+  <div class="pointer-events-none absolute -top-32 -left-40 w-[520px] h-[520px] rounded-full bg-blush/40 blur-[120px]"></div>
+  <div class="pointer-events-none absolute top-40 right-0 w-[420px] h-[420px] rounded-full bg-cream blur-[100px]"></div>
+
+  <div class="relative max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="grid lg:grid-cols-[1.05fr_1fr] gap-12 lg:gap-16 items-center">
+
+      <!-- Columna texto -->
+      <div class="reveal">
+        <div class="flex items-center gap-3 mb-7">
+          <span class="w-8 h-px bg-gold"></span>
+          <span class="eyebrow text-gold">Dorrego · Guaymallén · Mendoza</span>
+        </div>
+
+        <h1 class="font-display font-light leading-[.95] tracking-[-.02em] text-[clamp(2.9rem,8vw,5.4rem)]">
+          Tu bienestar<br>
+          en manos de<br>
+          <span class="italic text-rose">quienes te cuidan.</span>
+        </h1>
+
+        <p class="mt-8 text-[15px] md:text-[17px] leading-relaxed text-ink/60 max-w-md font-light">
+          Estética facial, corporal y depilación definitiva en Dorrego, Mendoza.
+          Tecnología de última generación con la calidez de un equipo que te conoce por tu nombre.
+        </p>
+
+        <div class="mt-10 flex flex-col sm:flex-row gap-3.5">
+          <a href="https://wa.me/542614727245" target="_blank" rel="noopener"
+             class="group inline-flex items-center justify-center gap-2.5 rounded-full bg-ink text-white px-8 py-4.5 py-4 text-[12px] font-semibold tracking-[.12em] uppercase transition-all duration-500 hover:bg-rose hover:shadow-[0_20px_40px_-16px_rgba(212,163,150,.8)]">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.48-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.06 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.23 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35zM12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm0 18.02h-.01c-1.52 0-3.02-.41-4.32-1.18l-.31-.18-3.21.84.86-3.13-.2-.32a8.22 8.22 0 01-1.26-4.39c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 012.41 5.82c0 4.54-3.7 8.23-8.24 8.23z"/></svg>
+            Reservar por WhatsApp
+          </a>
+          <a href="#tratamientos"
+             class="inline-flex items-center justify-center rounded-full border border-ink/20 px-8 py-4 text-[12px] font-semibold tracking-[.12em] uppercase text-ink/80 transition-all duration-500 hover:border-ink hover:bg-ink hover:text-white">
+            Ver tratamientos
+          </a>
+        </div>
+
+        <!-- Prueba social -->
+        <div class="mt-12 pt-8 border-t border-ink/[.08] flex flex-wrap items-center gap-x-10 gap-y-5">
+          <div>
+            <p class="font-display text-3xl leading-none">+2.300</p>
+            <p class="text-[10px] tracking-[.16em] uppercase text-ink/45 mt-1.5">Nos siguen en Instagram</p>
+          </div>
+          <div class="w-px h-9 bg-ink/10 hidden sm:block"></div>
+          <div>
+            <p class="font-display text-3xl leading-none">4</p>
+            <p class="text-[10px] tracking-[.16em] uppercase text-ink/45 mt-1.5">Especialidades</p>
+          </div>
+          <div class="w-px h-9 bg-ink/10 hidden sm:block"></div>
+          <div>
+            <p class="font-display text-3xl leading-none italic text-rose">Escuela</p>
+            <p class="text-[10px] tracking-[.16em] uppercase text-ink/45 mt-1.5">Formamos profesionales</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Columna sello de marca -->
+      <div class="reveal relative" style="transition-delay:.15s">
+        <div class="relative rounded-[1.8rem] bg-cream border border-blush/60 px-7 py-12 md:px-12 md:py-16 text-center overflow-hidden">
+          <div class="pointer-events-none absolute -top-24 -right-24 w-72 h-72 rounded-full bg-blush/50 blur-[80px]"></div>
+          <div class="pointer-events-none absolute -bottom-24 -left-24 w-72 h-72 rounded-full bg-white blur-[70px]"></div>
+
+          <div class="relative">
+            <span class="logo-ring w-[132px] h-[132px] md:w-[164px] md:h-[164px] mx-auto">
+              <span class="logo-word text-[22px] md:text-[27px] tracking-[.14em]">BELLISIMA</span>
+              <span class="logo-rule w-[78px] md:w-[98px] my-[8px]"></span>
+              <span class="logo-tag text-[9px] md:text-[10px]">— LA QUE TE CUIDA —</span>
+            </span>
+
+            <div class="hairline w-44 mx-auto mt-10"></div>
+
+            <p class="mt-8 font-display text-[26px] md:text-[32px] italic leading-tight text-ink/85">
+              Cuidamos personas,<br>no solo pieles.
+            </p>
+            <p class="mt-4 text-[13px] leading-relaxed text-ink/50 font-light max-w-xs mx-auto">
+              Facial · Corporal · Depilación definitiva · Escuela de capacitación
+            </p>
+
+            <div class="mt-10 flex items-center justify-center gap-3">
+              <a href="https://www.instagram.com/bellisimamdz/" target="_blank" rel="noopener"
+                 class="group inline-flex items-center gap-2.5 rounded-full bg-white border border-ink/10 px-5 py-3 text-[11px] font-semibold tracking-[.1em] uppercase transition-all duration-500 hover:border-rose hover:text-rose">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
+                @bellisimamdz
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= MARQUEE FINO ================= -->
+<div class="border-y border-ink/[.07] bg-cream py-4 overflow-hidden">
+  <div class="flex items-center gap-10 text-[10px] tracking-[.3em] uppercase text-ink/40 whitespace-nowrap animate-[scroll_38s_linear_infinite]" style="width:max-content">
+    <span>HIFU</span><span class="text-gold">✦</span>
+    <span>Dermapen</span><span class="text-gold">✦</span>
+    <span>Mío Up</span><span class="text-gold">✦</span>
+    <span>Depilación definitiva</span><span class="text-gold">✦</span>
+    <span>Peelings</span><span class="text-gold">✦</span>
+    <span>Limpieza facial</span><span class="text-gold">✦</span>
+    <span>Masajes reductores</span><span class="text-gold">✦</span>
+    <span>Escuela de capacitación</span><span class="text-gold">✦</span>
+    <span>HIFU</span><span class="text-gold">✦</span>
+    <span>Dermapen</span><span class="text-gold">✦</span>
+    <span>Mío Up</span><span class="text-gold">✦</span>
+    <span>Depilación definitiva</span><span class="text-gold">✦</span>
+    <span>Peelings</span><span class="text-gold">✦</span>
+    <span>Limpieza facial</span><span class="text-gold">✦</span>
+    <span>Masajes reductores</span><span class="text-gold">✦</span>
+    <span>Escuela de capacitación</span><span class="text-gold">✦</span>
+  </div>
+</div>
+<style>@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}</style>
+
+<!-- ================= TRATAMIENTOS ================= -->
+<section id="tratamientos" class="py-24 md:py-36 bg-white">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+
+    <div class="reveal max-w-2xl mb-16 md:mb-20">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="w-8 h-px bg-gold"></span>
+        <span class="eyebrow text-gold">Nuestros tratamientos</span>
+      </div>
+      <h2 class="font-display font-light leading-[1.02] tracking-[-.02em] text-[clamp(2.2rem,5.5vw,3.6rem)]">
+        Tres caminos hacia<br><span class="italic text-rose">la mejor versión de vos.</span>
+      </h2>
+      <p class="mt-6 text-[15px] leading-relaxed text-ink/55 font-light max-w-lg">
+        Cada tratamiento arranca con una consulta sin cargo. Evaluamos tu piel, escuchamos tu objetivo y armamos un plan real, con tiempos y resultados que podemos sostener.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+
+      <!-- FACIAL -->
+      <article class="card reveal group rounded-[1.5rem] overflow-hidden bg-cream border border-ink/[.06] flex flex-col">
+        <div class="relative aspect-[5/4] overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=1000&auto=format&fit=crop"
+               alt="Mujer recibiendo un tratamiento facial en cabina" loading="lazy" class="card-media w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-ink/50 to-transparent"></div>
+          <span class="absolute top-4 left-4 bg-white/95 backdrop-blur rounded-full px-3.5 py-1.5 eyebrow text-ink/70">Facial</span>
+        </div>
+        <div class="p-7 md:p-8 flex flex-col flex-1">
+          <h3 class="font-display text-3xl leading-tight">Estética facial</h3>
+          <p class="mt-3 text-[14px] leading-relaxed text-ink/55 font-light">
+            Firmeza, luminosidad y textura. Trabajamos la piel en profundidad, sin quirófano y sin frenar tu vida.
+          </p>
+          <ul class="mt-6 space-y-3 text-[13px] flex-1">
+            <li class="flex gap-3">
+              <span class="text-gold mt-[3px] text-[9px]">◆</span>
+              <span><strong class="font-semibold">HIFU</strong> — lifting sin cirugía: tensa epidermis, dermis y tono muscular.</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-gold mt-[3px] text-[9px]">◆</span>
+              <span><strong class="font-semibold">Peelings renovadores</strong> — manchas, marcas de acné y opacidad.</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-gold mt-[3px] text-[9px]">◆</span>
+              <span><strong class="font-semibold">Dermapen</strong> — colágeno propio, poros cerrados, cicatrices más finas.</span>
+            </li>
+          </ul>
+          <a href="https://wa.me/542614727245?text=Hola%20BELLISIMA!%20Quiero%20consultar%20por%20Est%C3%A9tica%20Facial"
+             target="_blank" rel="noopener"
+             class="link-fine mt-7 inline-flex items-center gap-2 self-start text-[11px] font-semibold tracking-[.14em] uppercase text-rose hover:text-ink transition-colors">
+            Consultar por este servicio
+            <svg class="w-3 h-3" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- CORPORAL -->
+      <article class="card reveal group rounded-[1.5rem] overflow-hidden bg-cream border border-ink/[.06] flex flex-col" style="transition-delay:.1s">
+        <div class="relative aspect-[5/4] overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=1000&auto=format&fit=crop"
+               alt="Mujer recibiendo un tratamiento corporal reductor" loading="lazy" class="card-media w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-ink/50 to-transparent"></div>
+          <span class="absolute top-4 left-4 bg-white/95 backdrop-blur rounded-full px-3.5 py-1.5 eyebrow text-ink/70">Corporal</span>
+        </div>
+        <div class="p-7 md:p-8 flex flex-col flex-1">
+          <h3 class="font-display text-3xl leading-tight">Estética corporal</h3>
+          <p class="mt-3 text-[14px] leading-relaxed text-ink/55 font-light">
+            Tonificar, reducir y reactivar. Tecnología asistida combinada con manos que saben leer cada cuerpo.
+          </p>
+          <ul class="mt-6 space-y-3 text-[13px] flex-1">
+            <li class="flex gap-3">
+              <span class="text-gold mt-[3px] text-[9px]">◆</span>
+              <span><strong class="font-semibold">Mío Up</strong> — tonificación y musculación asistida, sin esfuerzo articular.</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-gold mt-[3px] text-[9px]">◆</span>
+              <span><strong class="font-semibold">Masajes reductores</strong> — modelan contorno y activan circulación.</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-gold mt-[3px] text-[9px]">◆</span>
+              <span><strong class="font-semibold">Planes por sesiones</strong> — seguimiento de medidas desde el día uno.</span>
+            </li>
+          </ul>
+          <a href="https://wa.me/542614727245?text=Hola%20BELLISIMA!%20Quiero%20consultar%20por%20Est%C3%A9tica%20Corporal"
+             target="_blank" rel="noopener"
+             class="link-fine mt-7 inline-flex items-center gap-2 self-start text-[11px] font-semibold tracking-[.14em] uppercase text-rose hover:text-ink transition-colors">
+            Consultar por este servicio
+            <svg class="w-3 h-3" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- DEPILACIÓN -->
+      <article class="card reveal group rounded-[1.5rem] overflow-hidden bg-cream border border-ink/[.06] flex flex-col" style="transition-delay:.2s">
+        <div class="relative aspect-[5/4] overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?q=80&w=1000&auto=format&fit=crop"
+               alt="Mujer realizándose una sesión de depilación definitiva con láser" loading="lazy" class="card-media w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-ink/50 to-transparent"></div>
+          <span class="absolute top-4 left-4 bg-white/95 backdrop-blur rounded-full px-3.5 py-1.5 eyebrow text-ink/70">Láser</span>
+        </div>
+        <div class="p-7 md:p-8 flex flex-col flex-1">
+          <h3 class="font-display text-3xl leading-tight">Depilación definitiva</h3>
+          <p class="mt-3 text-[14px] leading-relaxed text-ink/55 font-light">
+            Un espacio pensado para que la depilación deje de ser una rutina eterna. Seguro, eficaz y para siempre.
+          </p>
+          <ul class="mt-6 space-y-3 text-[13px] flex-1">
+            <li class="flex gap-3">
+              <span class="text-gold mt-[3px] text-[9px]">◆</span>
+              <span><strong class="font-semibold">Tecnología láser</strong> — apta para todo tipo de piel, todo el año.</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-gold mt-[3px] text-[9px]">◆</span>
+              <span><strong class="font-semibold">Zonas o cuerpo completo</strong> — armás el combo que necesitás.</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-gold mt-[3px] text-[9px]">◆</span>
+              <span><strong class="font-semibold">Resultados duraderos</strong> — sesiones cortas, piel suave de verdad.</span>
+            </li>
+          </ul>
+          <a href="https://wa.me/542614727245?text=Hola%20BELLISIMA!%20Quiero%20consultar%20por%20Depilaci%C3%B3n%20Definitiva"
+             target="_blank" rel="noopener"
+             class="link-fine mt-7 inline-flex items-center gap-2 self-start text-[11px] font-semibold tracking-[.14em] uppercase text-rose hover:text-ink transition-colors">
+            Consultar por este servicio
+            <svg class="w-3 h-3" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg>
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= FRASE / SELLO ================= -->
+<section class="py-20 md:py-28 bg-cream border-y border-ink/[.06]">
+  <div class="max-w-3xl mx-auto px-5 sm:px-8 text-center reveal">
+    <div class="hairline w-40 mx-auto mb-10"></div>
+    <p class="font-display font-light italic leading-[1.15] text-[clamp(1.7rem,4.5vw,2.9rem)] text-ink/85">
+      “No vinimos a vender tratamientos.<br>Vinimos a cuidar a las personas que confían en nosotros.”
+    </p>
+    <p class="mt-8 eyebrow text-ink/40">Equipo BELLISIMA · Dorrego, Mendoza</p>
+    <div class="hairline w-40 mx-auto mt-10"></div>
+  </div>
+</section>
+
+<!-- ================= ESCUELA ================= -->
+<section id="capacitacion" class="relative py-24 md:py-36 overflow-hidden bg-ink text-white">
+  <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=1600&auto=format&fit=crop"
+       alt="" class="absolute inset-0 w-full h-full object-cover opacity-[.16]">
+  <div class="absolute inset-0 bg-gradient-to-r from-ink via-ink/92 to-ink/60"></div>
+  <div class="pointer-events-none absolute -bottom-40 -right-20 w-[500px] h-[500px] rounded-full bg-rose/20 blur-[120px]"></div>
+
+  <div class="relative max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="grid lg:grid-cols-[1.15fr_1fr] gap-12 lg:gap-20 items-center">
+      <div class="reveal">
+        <div class="flex items-center gap-3 mb-7">
+          <span class="w-8 h-px bg-gold"></span>
+          <span class="eyebrow text-gold">Escuela de capacitación</span>
+        </div>
+        <h2 class="font-display font-light leading-[1.02] tracking-[-.02em] text-[clamp(2.2rem,5.5vw,3.8rem)]">
+          Capacitate<br>con los mejores.
+        </h2>
+        <p class="mt-7 text-[15px] md:text-[17px] leading-relaxed text-white/60 font-light max-w-lg">
+          BELLISIMA no es solo un centro: es también una escuela donde se forman los profesionales de la estética de Mendoza. Cursos profesionales con salida laboral, práctica real sobre gabinete y el respaldo de un centro que trabaja todos los días.
+        </p>
+
+        <div class="mt-10 grid sm:grid-cols-3 gap-5 max-w-lg">
+          <div class="border-t border-white/15 pt-4">
+            <p class="font-display text-2xl">Práctica real</p>
+            <p class="text-[11px] text-white/45 mt-1.5 leading-relaxed">En gabinete, con equipos en uso.</p>
+          </div>
+          <div class="border-t border-white/15 pt-4">
+            <p class="font-display text-2xl">Salida laboral</p>
+            <p class="text-[11px] text-white/45 mt-1.5 leading-relaxed">Formación orientada al trabajo.</p>
+          </div>
+          <div class="border-t border-white/15 pt-4">
+            <p class="font-display text-2xl">Cupos limitados</p>
+            <p class="text-[11px] text-white/45 mt-1.5 leading-relaxed">Grupos chicos, seguimiento cercano.</p>
+          </div>
+        </div>
+
+        <a href="https://wa.me/542614727245?text=Hola%20BELLISIMA!%20Quiero%20informaci%C3%B3n%20sobre%20los%20cursos%20de%20la%20Escuela%20de%20Capacitaci%C3%B3n"
+           target="_blank" rel="noopener"
+           class="group mt-11 inline-flex items-center gap-3 rounded-full bg-white text-ink px-8 py-4 text-[12px] font-semibold tracking-[.12em] uppercase transition-all duration-500 hover:bg-gold hover:text-white">
+          Solicitar información de cursos
+          <svg class="w-3.5 h-3.5 transition-transform duration-500 group-hover:translate-x-1" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+
+      <div class="reveal hidden lg:block" style="transition-delay:.15s">
+        <div class="relative rounded-[1.8rem] overflow-hidden aspect-[4/5] border border-white/10">
+          <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=1000&auto=format&fit=crop"
+               alt="Alumnas practicando en la escuela de estética BELLISIMA" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent"></div>
+          <div class="absolute bottom-6 left-6 right-6">
+            <p class="font-display text-2xl italic">Formamos a quienes van a cuidar.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACTO / MAPA ================= -->
+<section id="donde" class="py-24 md:py-36 bg-white">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+
+    <div class="max-w-2xl mx-auto">
+
+      <!-- Info -->
+      <div class="reveal">
+        <div class="flex items-center gap-3 mb-6">
+          <span class="w-8 h-px bg-gold"></span>
+          <span class="eyebrow text-gold">Dónde estamos</span>
+        </div>
+        <h2 class="font-display font-light leading-[1.02] tracking-[-.02em] text-[clamp(2.2rem,5.5vw,3.6rem)]">
+          Te esperamos<br><span class="italic text-rose">en Dorrego.</span>
+        </h2>
+
+        <div class="mt-11 space-y-9">
+          <div class="flex gap-5">
+            <div class="w-11 h-11 rounded-full bg-blush/40 flex items-center justify-center shrink-0">
+              <svg class="w-4 h-4 text-rose" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-5.5-7-11a7 7 0 1114 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            </div>
+            <div>
+              <p class="eyebrow text-ink/40 mb-2">Dirección</p>
+              <p class="text-[15px] leading-relaxed">Espejo 2119, Dorrego<br>Guaymallén, Mendoza (5519)</p>
+            </div>
+          </div>
+
+          <div class="flex gap-5">
+            <div class="w-11 h-11 rounded-full bg-blush/40 flex items-center justify-center shrink-0">
+              <svg class="w-4 h-4 text-rose" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+            </div>
+            <div>
+              <p class="eyebrow text-ink/40 mb-2">Horarios de atención</p>
+              <div class="space-y-1.5 text-[15px]">
+                <p class="flex justify-between gap-8 max-w-[280px]"><span class="text-ink/60">Lunes a viernes</span> <span class="font-medium">09:00 — 20:00</span></p>
+                <p class="flex justify-between gap-8 max-w-[280px]"><span class="text-ink/60">Sábados</span> <span class="font-medium">09:00 — 14:00</span></p>
+                <p class="flex justify-between gap-8 max-w-[280px]"><span class="text-ink/60">Domingos</span> <span class="text-ink/35">Cerrado</span></p>
+              </div>
+              <p class="mt-3 text-[12px] text-ink/45 font-light">Atendemos con turno previo para que nadie espere.</p>
+            </div>
+          </div>
+
+          <div class="flex gap-5">
+            <div class="w-11 h-11 rounded-full bg-blush/40 flex items-center justify-center shrink-0">
+              <svg class="w-4 h-4 text-rose" viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.48-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.06 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.23 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35zM12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2z"/></svg>
+            </div>
+            <div>
+              <p class="eyebrow text-ink/40 mb-2">Turnos por WhatsApp</p>
+              <a href="https://wa.me/542614727245" target="_blank" rel="noopener"
+                 class="link-fine text-[19px] font-display hover:text-rose transition-colors">+54 261 472-7245</a>
+            </div>
+          </div>
+
+          <div class="flex gap-5">
+            <div class="w-11 h-11 rounded-full bg-blush/40 flex items-center justify-center shrink-0">
+              <svg class="w-4 h-4 text-rose" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
+            </div>
+            <div>
+              <p class="eyebrow text-ink/40 mb-2">Seguinos en Instagram</p>
+              <a href="https://www.instagram.com/bellisimamdz/" target="_blank" rel="noopener"
+                 class="link-fine text-[19px] font-display hover:text-rose transition-colors">@bellisimamdz</a>
+              <p class="mt-1.5 text-[12px] text-ink/45 font-light">Promos, resultados reales y novedades de la escuela.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-11 flex flex-col sm:flex-row gap-3.5">
+          <a href="https://www.google.com/maps/search/?api=1&query=Espejo+2119,+Dorrego,+Guaymall%C3%A9n,+Mendoza"
+             target="_blank" rel="noopener"
+             class="group inline-flex items-center justify-center gap-2.5 rounded-full bg-ink text-white px-7 py-4 text-[12px] font-semibold tracking-[.12em] uppercase transition-all duration-500 hover:bg-rose">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-5.5-7-11a7 7 0 1114 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            Cómo llegar con Google Maps
+          </a>
+          <a href="https://www.instagram.com/bellisimamdz/" target="_blank" rel="noopener"
+             class="inline-flex items-center justify-center gap-2.5 rounded-full border border-ink/20 px-7 py-4 text-[12px] font-semibold tracking-[.12em] uppercase transition-all duration-500 hover:border-rose hover:text-rose hover:bg-cream">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
+            Ver Instagram
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA FINAL ================= -->
+<section class="py-20 md:py-28 bg-cream border-t border-ink/[.06]">
+  <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center reveal">
+    <h2 class="font-display font-light leading-[1.05] tracking-[-.02em] text-[clamp(2rem,5vw,3.2rem)]">
+      Tu turno está a<br><span class="italic text-rose">un mensaje de distancia.</span>
+    </h2>
+    <p class="mt-6 text-[15px] text-ink/55 font-light max-w-md mx-auto">
+      Contanos qué te gustaría trabajar y te ayudamos a elegir el tratamiento indicado. Sin compromiso.
+    </p>
+    <a href="https://wa.me/542614727245" target="_blank" rel="noopener"
+       class="group mt-10 inline-flex items-center gap-3 rounded-full bg-ink text-white px-10 py-5 text-[12px] font-semibold tracking-[.14em] uppercase transition-all duration-500 hover:bg-rose hover:shadow-[0_24px_50px_-18px_rgba(212,163,150,.9)]">
+      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.43 12.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.48-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.06 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.23 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35z"/></svg>
+      Reservar turno por WhatsApp
+    </a>
+    <p class="mt-6 text-[13px] text-ink/45 font-light">
+      O mirá nuestros resultados en
+      <a href="https://www.instagram.com/bellisimamdz/" target="_blank" rel="noopener"
+         class="link-fine font-medium text-rose hover:text-ink transition-colors">@bellisimamdz</a>
+    </p>
+    <p class="mt-6 font-display text-lg italic text-ink/50">"La que te cuida"</p>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-white border-t border-ink/[.08] pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="grid md:grid-cols-[1.4fr_1fr_1fr] gap-12 md:gap-8">
+
+      <div>
+        <span class="logo-ring w-[82px] h-[82px]">
+          <span class="logo-word text-[14px] tracking-[.14em]">BELLISIMA</span>
+          <span class="logo-rule w-[48px] my-[5px]"></span>
+          <span class="logo-tag text-[6.5px]">— LA QUE TE CUIDA —</span>
+        </span>
+        <p class="mt-6 text-[14px] leading-relaxed text-ink/50 font-light max-w-xs">
+          Centro de estética y escuela de capacitación en Dorrego, Guaymallén. Facial · Corporal · Depilación definitiva.
+        </p>
+        <div class="mt-6 flex items-center gap-3">
+          <a href="https://www.instagram.com/bellisimamdz/" target="_blank" rel="noopener" aria-label="Instagram de BELLISIMA"
+             class="w-10 h-10 rounded-full border border-ink/12 flex items-center justify-center text-ink/60 transition-all duration-500 hover:border-rose hover:text-rose hover:bg-cream">
+            <svg class="w-[17px] h-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://wa.me/542614727245" target="_blank" rel="noopener" aria-label="WhatsApp de BELLISIMA"
+             class="w-10 h-10 rounded-full border border-ink/12 flex items-center justify-center text-ink/60 transition-all duration-500 hover:border-rose hover:text-rose hover:bg-cream">
+            <svg class="w-[17px] h-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 11.6a8.4 8.4 0 01-11.9 7.6L4 20.5l1.4-4.5A8.4 8.4 0 1120.5 11.6z"/><path d="M9 9.4c0-.4.3-.7.7-.7h.7l.9 2-.7.8c.5 1 1.3 1.8 2.3 2.3l.8-.7 2 .9v.7c0 .4-.3.7-.7.7A7 7 0 019 9.4z" fill="currentColor" stroke="none" opacity=".9"/></svg>
+          </a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Espejo+2119,+Dorrego,+Guaymall%C3%A9n,+Mendoza" target="_blank" rel="noopener" aria-label="Ubicación en Google Maps"
+             class="w-10 h-10 rounded-full border border-ink/12 flex items-center justify-center text-ink/60 transition-all duration-500 hover:border-rose hover:text-rose hover:bg-cream">
+            <svg class="w-[17px] h-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-5.5-7-11a7 7 0 1114 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <p class="eyebrow text-ink/40 mb-5">Navegación</p>
+        <ul class="space-y-3 text-[14px] text-ink/65">
+          <li><a href="#tratamientos" class="link-fine hover:text-rose transition-colors">Tratamientos</a></li>
+          <li><a href="#capacitacion" class="link-fine hover:text-rose transition-colors">Escuela de capacitación</a></li>
+          <li><a href="#donde" class="link-fine hover:text-rose transition-colors">Dónde estamos</a></li>
+          <li><a href="https://wa.me/542614727245" target="_blank" rel="noopener" class="link-fine hover:text-rose transition-colors">Reservar turno</a></li>
+          <li><a href="https://www.instagram.com/bellisimamdz/" target="_blank" rel="noopener" class="link-fine hover:text-rose transition-colors">Instagram @bellisimamdz</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="eyebrow text-ink/40 mb-5">Contacto</p>
+        <ul class="space-y-3 text-[14px] text-ink/65">
+          <li>
+            <a href="https://wa.me/542614727245" target="_blank" rel="noopener"
+               class="inline-flex items-center gap-2.5 link-fine hover:text-rose transition-colors">
+              <svg class="w-3.5 h-3.5 text-rose" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2z"/></svg>
+              +54 261 472-7245
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/bellisimamdz/" target="_blank" rel="noopener"
+               class="inline-flex items-center gap-2.5 link-fine hover:text-rose transition-colors">
+              <svg class="w-3.5 h-3.5 text-rose" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
+              @bellisimamdz
+            </a>
+          </li>
+          <li>Espejo 2119, Dorrego<br>Guaymallén, Mendoza</li>
+          <li class="pt-1">Lun a Vie 09—20 h · Sáb 09—14 h</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="mt-14 pt-7 border-t border-ink/[.07] flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-[11px] tracking-wide text-ink/35">© 2026 BELLISIMA Centro de Estética. Todos los derechos reservados.</p>
+      <p class="text-[11px] tracking-[.2em] uppercase text-ink/30">La que te cuida</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Botón flotante de turnos (marca) -->
+<a href="https://wa.me/542614727245" target="_blank" rel="noopener" aria-label="Reservar turno por WhatsApp"
+   class="wa-float group fixed bottom-5 right-5 z-50 flex items-center gap-0 rounded-full bg-ink text-white h-14 pl-[15px] pr-[15px] md:hover:pr-6 transition-all duration-500 ease-[cubic-bezier(.16,1,.3,1)] hover:bg-rose active:scale-95">
+  <span class="absolute inset-0 rounded-full border border-white/15 pointer-events-none"></span>
+  <svg class="w-[22px] h-[22px] shrink-0 relative" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20.5 11.6a8.4 8.4 0 01-11.9 7.6L4 20.5l1.4-4.5A8.4 8.4 0 1120.5 11.6z"/>
+    <path d="M9 9.4c0-.4.3-.7.7-.7h.7l.9 2-.7.8c.5 1 1.3 1.8 2.3 2.3l.8-.7 2 .9v.7c0 .4-.3.7-.7.7A7 7 0 019 9.4z" fill="currentColor" stroke="none" opacity=".9"/>
+  </svg>
+  <span class="relative max-w-0 md:group-hover:max-w-[190px] overflow-hidden whitespace-nowrap text-[11px] font-semibold tracking-[.12em] uppercase transition-all duration-500 ease-[cubic-bezier(.16,1,.3,1)] md:group-hover:ml-2.5">Reservar turno</span>
+</a>
+
+<script>
+  // Nav shrink
+  const nav = document.getElementById('nav');
+  const onScroll = () => {
+    if (window.scrollY > 20) nav.classList.add('shadow-[0_10px_40px_-24px_rgba(43,41,39,.5)]');
+    else nav.classList.remove('shadow-[0_10px_40px_-24px_rgba(43,41,39,.5)]');
+  };
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
